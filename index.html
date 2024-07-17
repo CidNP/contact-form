@@ -10,18 +10,31 @@
 
 <body>
     <div class="container">
-        <form onsubmit="sendEmail(); reset(); return false;" >
+        <form method="post" action="https://formspree.io/f/xlezborv">
             <h3>GET IN TOUCH</h3>
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email Id" required>
-            <input type="text" id="phone" placeholder="Your Phone Number" required>
-            <textarea id="message" rows="4" placeholder="How can we help ypu?"></textarea>
+            <input type="text" name="name" id="name" placeholder="Your Name" required>
+            <input type="email" name="email" id="email" placeholder="Your Email Id" required>
+            <input type="text" name="phone" id="phone" placeholder="Your Phone Number" required>
+            <textarea id="message" name="message" rows="4" placeholder="How can we help ypu?"></textarea>
             <button type="submit">Send</button>
         </form>
     </div>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
+    <script>
+        window.embeddedChatbotConfig = {
+        chatbotId: "nfLBZMdJVqookC-CDtTN9",
+        domain: "www.chatbase.co"
+        }
+        </script>
+        <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="nfLBZMdJVqookC-CDtTN9"
+        domain="www.chatbase.co"
+        defer>
+        </script>
 </body>
+
 
 
 </html>
